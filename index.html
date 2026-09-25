@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="page_title">Centro Clínico de la Dra. Belisa Medina | Dermatología Clínica y Estética en Santo Domingo</title>
+  <meta name="description" content="Centro Clínico de la Dra. Belisa Medina en Naco, Santo Domingo. Atención dermatológica clínica y estética basada en evidencia, tecnología avanzada y rutinas personalizadas." />
+
+  <!-- Google Fonts: Newsreader (Headings) & DM Sans (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=Newsreader:ital,opsz,wght@0,6..72,400..700;1,6..72,400..700&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Splide Slider CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.2.2/dist/css/splide-core.min.css" />
+
+  <!-- GSAP & Plugins -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/Draggable.min.js"></script>
+
+  <!-- LeaderLine for Fluid Connecting Node Cables -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.3/leader-line.min.js"></script>
+
+  <!-- Splide Slider JS -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.2.2/dist/js/splide.min.js"></script>
+</head>
+
+<body>
+  <div class="page-wrapper">
+    <div class="main-wrapper">
+
+      <!-- ==========================================================================
+           TOP BANNER & NAVIGATION
+           ========================================================================== -->
+      <header class="navbar_main">
+        <!-- Top Announcement Bar -->
+        <section class="banner_component">
+          <div class="padding-global">
+            <div class="container-banner-top">
+              <div class="banner_wrapper">
+                <div class="banner_left_badge">
+                  <div class="banner_pulse_dot"></div>
+                  <div class="banner_rich-text" data-i18n="banner_announcement">
+                    CENTRO CLÍNICO DE LA DRA. BELISA MEDINA • Dermatóloga • Naco, Santo Domingo
+                  </div>
+                </div>
+                <div style="display: flex; align-items: center; gap: 1.25rem;">
+                  <button class="banner_cta" onclick="openBookingModal('Consulta General')">
+                    <span data-i18n="banner_cta">Reservar Cita</span> <span>→</span>
+                  </button>
+                  <div class="banner_disclaimer-text">
+                    <span data-i18n="banner_disclaimer">Consultas presenciales y virtuales.</span>
+                    <a class="disclaimer-text-link" href="#protocols" data-i18n="banner_view_protocols">Ver Protocolos</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Main Navigation Bar -->
+        <div class="navbar_container">
+          <div class="navbar-left">
+            <a href="/" class="brand">
+              <div class="brand-emblem">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                  <circle cx="12" cy="12" r="8"></circle>
+                </svg>
+              </div>
+              <div class="brand-title-wrap">
+                <span class="brand-name" data-i18n="brand_name">Dra. Belisa Medina</span>
+                <span class="brand-subtext" data-i18n="brand_subtext">Dermatología Clínica y Estética</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="navbar-right">
+            <nav class="nav-links-wrapper">
+              <a class="nav_text-link" href="#modalities" data-i18n="nav_modalities">MODALIDADES</a>
+              <a class="nav_text-link" href="#clinical-tools" data-i18n="nav_tools">HERRAMIENTAS</a>
+              <a class="nav_text-link" href="#cellular-outcome" data-i18n="nav_cellular">CIENCIA CELULAR</a>
+              <a class="nav_text-link" href="#workflow-app" data-i18n="nav_system">SISTEMA DE CUIDADO</a>
+              <a class="nav_text-link" href="#protocols" data-i18n="nav_protocols">PROTOCOLOS</a>
+              <a class="nav_text-link is-routine" href="javascript:void(0)" onclick="openRoutineModal()" data-i18n="nav_routine">MI RUTINA</a>
+            </nav>
+
+            <!-- Language Switcher in Navbar -->
+            <div class="lang-toggle-wrap">
+              <button type="button" class="lang-btn active" data-lang-btn="es" onclick="window.i18n.setLanguage('es')">ES</button>
+              <span class="lang-divider">|</span>
+              <button type="button" class="lang-btn" data-lang-btn="en" onclick="window.i18n.setLanguage('en')">EN</button>
+            </div>
+
+            <button class="huge_nav-button" id="try_now_top" onclick="openBookingModal('Consulta Dermatológica')">
+              <span class="nav-sparkle">✦</span>
+              <span data-i18n="nav_cta">Agendar Cita</span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <!-- ==========================================================================
+           HERO SECTION: CONNECTED CLINICAL NODES CANVAS
+           ========================================================================== -->
+      <section class="section-hero">
+        <div class="grid-container is-hero">
+          <div class="hero-header-wrap">
+            <div class="trust-badge-hero">
+              <span class="dot"></span>
+              <span data-i18n="hero_badge">Dermatóloga • Miembro de la Sociedad Dominicana de Dermatología • Atención basada en evidencia</span>
+            </div>
+            <h1 class="heading_h1-hero">
+              <span data-i18n="hero_h1_prefix">Centro Clínico de la Dra. Belisa Medina</span><br />
+              <span class="gradient-text" data-i18n="hero_h1_highlight">Dermatología Clínica y Estética</span>
+            </h1>
+            <p class="text-size-large" data-i18n="hero_description">
+              Atención dermatológica médica y estética de excelencia en Santo Domingo. Unimos diagnóstico avanzado, farmacología personalizada y aparatología de vanguardia para la salud y belleza de su piel.
+            </p>
+            <div class="sub-hero-indicator">
+              <span class="badge" data-i18n="hero_indicator_badge">Lienzo interactivo</span>
+              <span data-i18n="hero_indicator_text">Arrastre los nodos para explorar la secuencia de atención</span>
+            </div>
+          </div>
+
+          <!-- Interactive Draggable Node Canvas -->
+          <div class="hero-draggbles-comp" id="heroCanvas">
+            <div class="canvas-drag-hint">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 9l-3 3 3 3M9 5l3-3 3 3M15 19l-3 3-3-3M19 9l3 3-3 3"></path>
+              </svg>
+              <span data-i18n="canvas_drag_hint">Nodos interactivos: Clic y arrastre</span>
+            </div>
+
+            <!-- NODE 1: Digital Facial Analysis -->
+            <div id="node1" class="node-connect" node-connect-target="node3">
+              <div class="node-header">
+                <div class="node-title-group">
+                  <div class="node-icon-dot"></div>
+                  <span class="node-category" data-i18n="node1_category">01. Diagnóstico</span>
+                </div>
+                <span class="node-tag" data-i18n="node1_tag">Análisis Facial</span>
+              </div>
+              <div class="scanner-canvas-wrap">
+                <div class="scanner-grid-overlay"></div>
+                <div class="scanner-beam"></div>
+                <div class="scanner-face-silhouette">
+                  <div class="scanner-depth-point" style="top: 25%; left: 30%;"></div>
+                  <div class="scanner-depth-point" style="top: 45%; right: 25%;"></div>
+                  <div class="scanner-depth-point" style="bottom: 30%; left: 40%;"></div>
+                  <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="rgba(201, 163, 155, 0.9)" stroke-width="1.5">
+                    <circle cx="12" cy="8" r="5"></circle>
+                    <path d="M20 21a8 8 0 1 0-16 0"></path>
+                  </svg>
+                </div>
+              </div>
+              <div class="node-footer">
+                <strong data-i18n="node1_strong">Análisis facial digital:</strong> <span data-i18n="node1_text">Mapeo detallado de la superficie cutánea y textura para personalizar su tratamiento.</span>
+              </div>
+              <div class="line-anchor start n1"></div>
+            </div>
+
+            <!-- NODE 2: Spectral Pigment & Redness Evaluation -->
+            <div id="node2" class="node-connect" node-connect-target="node3">
+              <div class="node-header">
+                <div class="node-title-group">
+                  <div class="node-icon-dot" style="background: var(--color-gold-600);"></div>
+                  <span class="node-category" data-i18n="node2_category">02. Evaluación</span>
+                </div>
+                <span class="node-tag" data-i18n="node2_tag">Luz Polarizada</span>
+              </div>
+              <!-- REEMPLAZAR con foto real -->
+              <img src="https://salud-america.org/wp-content/uploads/2026/05/iStock-2235302707-scaled.jpg" alt="Evaluación cutánea con luz polarizada" data-i18n-alt="node2_tag" class="node-body-img" style="height: 100px;" />
+              <div class="node-footer">
+                <strong data-i18n="node2_strong">Evaluación de pigmento y rojeces:</strong> <span data-i18n="node2_text">Luz polarizada para detectar manchas solares y áreas vasculares profundas.</span>
+              </div>
+              <div class="line-anchor start n2"></div>
+            </div>
+
+            <!-- NODE 3: Custom Topical Rx Formulation -->
+            <div id="node3" class="node-connect" node-connect-target="node4, node5">
+              <div class="node-header">
+                <div class="node-title-group">
+                  <div class="node-icon-dot" style="background: var(--color-sage-600);"></div>
+                  <span class="node-category" data-i18n="node3_category">03. Formulación</span>
+                </div>
+                <span class="node-tag" data-i18n="node3_tag">Fórmula Magistral</span>
+              </div>
+              <!-- REEMPLAZAR con foto real -->
+              <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=600&q=80" alt="Formulación dermatológica magistral" data-i18n-alt="node3_tag" class="node-body-img" style="height: 110px;" />
+              <div class="node-footer">
+                <strong data-i18n="node3_strong">Fórmula tópica personalizada:</strong> <span data-i18n="node3_text">Tratamiento magistral adaptado a su tipo de piel y necesidades clínicas.</span>
+              </div>
+              <div class="line-anchor end n3"></div>
+              <div class="line-anchor start n3"></div>
+            </div>
+
+            <!-- NODE 4: Medical Protocol & Phototype Safety -->
+            <div id="node4" class="node-connect" node-connect-target="node6">
+              <div class="node-header">
+                <div class="node-title-group">
+                  <div class="node-icon-dot" style="background: var(--color-sage-800);"></div>
+                  <span class="node-category" data-i18n="node4_category">04. Seguridad</span>
+                </div>
+                <span class="node-tag" data-i18n="node4_tag">Protocolo Médico</span>
+              </div>
+              <div style="background: var(--color-alabaster-200); border: 1px solid var(--border-hairline-light); border-radius: 0.5rem; padding: 0.65rem; font-family: monospace; font-size: 0.72rem; color: var(--text-primary-dark); line-height: 1.45;">
+                <span style="color: var(--color-sage-700);" data-i18n="node4_code_comment">// Calibración personalizada por fototipo</span><br />
+                <span data-i18n="node4_code_line1">Evaluación de fototipo cutáneo</span><br />
+                <span data-i18n="node4_code_line2">Parámetros médicos adaptados</span><br />
+                <span data-i18n="node4_code_line3">Protección y confort de la piel</span>
+              </div>
+              <div class="node-footer">
+                <strong data-i18n="node4_strong">Seguridad para cada piel:</strong> <span data-i18n="node4_text">Ajuste de parámetros según su fototipo para máxima eficacia y cuidado.</span>
+              </div>
+              <div class="line-anchor end n4"></div>
+              <div class="line-anchor start n4"></div>
+            </div>
+
+            <!-- NODE 5: Morpheus8® Fractional RF -->
+            <div id="node5" class="node-connect" node-connect-target="node6">
+              <div class="node-header">
+                <div class="node-title-group">
+                  <div class="node-icon-dot" style="background: var(--color-gold-500);"></div>
+                  <span class="node-category" data-i18n="node5_category">05. Procedimiento</span>
+                </div>
+                <span class="node-tag" data-i18n="node5_tag">Morpheus8®</span>
+              </div>
+              <!-- REEMPLAZAR con foto real -->
+              <img src="https://lemonclinic.es/wp-content/uploads/2025/03/CBM-3307.jpeg" alt="Tratamiento con Morpheus8" data-i18n-alt="node5_tag" class="node-body-img" style="height: 110px;" />
+              <div class="node-footer">
+                <strong data-i18n="node5_strong">Radiofrecuencia fraccionada:</strong> <span data-i18n="node5_text">Estimula la producción natural de colágeno y tensa los tejidos profundos.</span>
+              </div>
+              <div class="line-anchor end n5"></div>
+              <div class="line-anchor start n5"></div>
+            </div>
+
+            <!-- NODE 6: Clinical Outcome & Skin Vitality -->
+            <div id="node6" class="node-connect">
+              <div class="node-header">
+                <div class="node-title-group">
+                  <div class="node-icon-dot" style="background: var(--color-sage-600);"></div>
+                  <span class="node-category" data-i18n="node6_category">06. Resultado</span>
+                </div>
+                <span class="node-tag" data-i18n="node6_tag">Salud Cutánea</span>
+              </div>
+              <div class="hero-video">
+                <!-- REEMPLAZAR con foto real -->
+                <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=600&q=80" alt="Resultado de luminosidad y salud en la piel" data-i18n-alt="node6_tag" />
+                <div class="video-clinical-overlay" data-i18n="node6_overlay">● Resultado clínico progresivo</div>
+              </div>
+              <div class="node-footer">
+                <strong data-i18n="node6_strong">Bienestar y armonía cutánea:</strong> <span data-i18n="node6_text">Piel renovada, equilibrada y con textura visiblemente más suave y luminosa.</span>
+              </div>
+              <div class="line-anchor end n6"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 2: MODALITIES (STICKY GSAP SCROLL TRIGGER)
+           ========================================================================== -->
+      <section class="section_models" id="modalities">
+        <div class="layout355_component">
+          <div class="padding-global">
+            <div class="container-large">
+              <div class="padding-section-large is-models">
+                <div class="models_content">
+
+                  <!-- Left Sticky Content -->
+                  <div class="models_content-left">
+                    <div class="badge-pill" data-i18n="modalities_badge">Tecnología Médica de Vanguardia</div>
+                    <h2 class="heading-style-xl" data-i18n="modalities_title">
+                      Tratamientos dermatológicos avanzados, adaptados a su piel.
+                    </h2>
+                    <p data-i18n="modalities_desc">
+                      Combinamos tecnología médica de referencia mundial con fórmulas dermatológicas personalizadas. Abordamos cada necesidad con rigor científico y criterio médico, sin soluciones genéricas.
+                    </p>
+                    <div class="clinical-badge-row">
+                      <div class="clinical-chip" data-i18n="modalities_chip1">Atención Médica Especializada</div>
+                      <div class="clinical-chip" data-i18n="modalities_chip2">Protocolos Personalizados</div>
+                      <div class="clinical-chip" data-i18n="modalities_chip3">Seguridad para Cada Fototipo</div>
+                      <div class="clinical-chip" data-i18n="modalities_chip4">Recuperación Confortable</div>
+                    </div>
+                  </div>
+
+                  <!-- Right Scrolling Modalities List -->
+                  <div class="models_content-right">
+                    <div class="models_item-list">
+                      <div class="models_item is-active" data-index="0">
+                        <h3 data-i18n="modality_0_title">Candela GentleMax Pro®</h3>
+                        <div class="modality-spec" data-i18n="modality_0_spec">Láser Alexandrite y Nd:YAG para lesiones pigmentadas y depilación médica</div>
+                      </div>
+                      <div class="models_item" data-index="1">
+                        <h3 data-i18n="modality_1_title">Morpheus8®: Radiofrecuencia Fraccionada</h3>
+                        <div class="modality-spec" data-i18n="modality_1_spec">Remodelación profunda del colágeno y tensado tisular</div>
+                      </div>
+                      <div class="models_item" data-index="2">
+                        <h3 data-i18n="modality_2_title">Sciton BBL HERO™</h3>
+                        <div class="modality-spec" data-i18n="modality_2_spec">Fototerapia avanzada para manchas solares y luminosidad facial</div>
+                      </div>
+                      <div class="models_item" data-index="3">
+                        <h3 data-i18n="modality_3_title">Fraxel® DUAL</h3>
+                        <div class="modality-spec" data-i18n="modality_3_spec">Láser fraccionado no ablativo para renovación y textura cutánea</div>
+                      </div>
+                      <div class="models_item" data-index="4">
+                        <h3 data-i18n="modality_4_title">HydraFacial® Syndeo</h3>
+                        <div class="modality-spec" data-i18n="modality_4_spec">Limpieza profunda, exfoliación suave e infusión de antioxidantes</div>
+                      </div>
+                      <div class="models_item" data-index="5">
+                        <h3 data-i18n="modality_5_title">Sofwave™: Ultrasonido Sincrónico</h3>
+                        <div class="modality-spec" data-i18n="modality_5_spec">Lifting facial y de cuello no invasivo mediante neocolagénesis</div>
+                      </div>
+                      <div class="models_item" data-index="6">
+                        <h3 data-i18n="modality_6_title">Vbeam® Prima: Láser Vascular</h3>
+                        <div class="modality-spec" data-i18n="modality_6_spec">Tratamiento específico de rojeces, rosácea y lesiones vasculares</div>
+                      </div>
+                      <div class="models_item" data-index="7">
+                        <h3 data-i18n="modality_7_title">SkinCeuticals®: Fórmulas Clínicas</h3>
+                        <div class="modality-spec" data-i18n="modality_7_spec">Antioxidantes médicos y protección celular avanzada</div>
+                      </div>
+                      <div class="models_item" data-index="8">
+                        <h3 data-i18n="modality_10_title">Rellenos de Ácido Hialurónico</h3>
+                        <div class="modality-spec" data-i18n="modality_10_spec">Restauración armónica de volúmenes con Restylane® y Juvéderm®</div>
+                      </div>
+                      <div class="models_item" data-index="9">
+                        <h3 data-i18n="modality_11_title">Toxina Botulínica</h3>
+                        <div class="modality-spec" data-i18n="modality_11_spec">Suavizado natural de líneas de expresión preservando su gesto</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Background Layers Synchronized to Active Modality -->
+        <div class="models_bg-image-layer">
+          <div class="image-overlay-layer"></div>
+          <div class="overlay-section-top"></div>
+          <div class="overlay-section-bottom"></div>
+
+          <!-- Modality Background 0: Candela -->
+          <img src="https://soleabrickellspa.com/wp-content/uploads/2026/04/Candela-GentleMax-Pro-Laser-Treatments.webp" alt="Candela GentleMax Pro" class="models_bg-image active" />
+          <!-- Modality Background 1: Morpheus8 -->
+          <img src="https://lemonclinic.es/wp-content/uploads/2025/03/CBM-3307.jpeg" alt="Tratamiento con Morpheus8" class="models_bg-image" />
+          <!-- Modality Background 2: BBL HERO -->
+          <img src="https://aethosnyc.com/wp-content/uploads/2024/10/Broadband-Light-Sciton-BBL%C2%AE-HERO-1200x800.jpg" alt="Sciton BBL HERO" class="models_bg-image" />
+          <!-- Modality Background 3: Fraxel -->
+          <img src="https://bendderm.com/wp-content/uploads/2023/08/MicrosoftTeams-image-104-1200x800.jpg" alt="Fraxel DUAL" class="models_bg-image" />
+          <!-- Modality Background 4: HydraFacial -->
+          <img src="https://www.435skin.com/wp-content/uploads/2021/01/HydraFacial-Treatment-Page-min-scaled.jpg" alt="HydraFacial Syndeo" class="models_bg-image" />
+          <!-- Modality Background 5: Sofwave -->
+          <img src="https://api.sofwave.com/app/uploads/2025/03/Explore-our-dedicated-sections-Sofwave-scaled.webp" alt="Sofwave" class="models_bg-image" />
+          <!-- Modality Background 6: Vbeam -->
+          <img src="https://clderm.com/wp-content/uploads/2025/05/Clderm-Vbeam-Prima-Procedure-SanDiego.jpg" alt="Vbeam Prima" class="models_bg-image" />
+          <!-- Modality Background 7: SkinCeuticals -->
+          <img src="https://aestheticmedicalpractitioner.com.au/wp-content/uploads/2020/10/SkC_AOX_2020_2_1280x720.jpg" alt="SkinCeuticals" class="models_bg-image" />
+          <!-- Modality Background 8: Dermal Fillers -->
+          <img src="https://drkbeautylv.com/wp-content/uploads/2020/11/Dr-K-Beauty-Dr.-Khronusova-Las-Vegas-NV-8-Benefits-of-Hyaluronic-Acid-Fillers-scaled.jpg" alt="Rellenos de ácido hialurónico" class="models_bg-image" />
+          <!-- Modality Background 9: Neuromodulators -->
+          <img src="https://sa1s3optim.patientpop.com/assets/images/provider/photos/2798148.png" alt="Toxina botulínica" class="models_bg-image" />
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 3: PROFESSIONAL CLINICAL TOOLS (INTERACTIVE IMAGE SWITCHER)
+           ========================================================================== -->
+      <section class="section_prof-tools" id="clinical-tools">
+        <div class="padding-global">
+          <div class="simple-container">
+            <div class="tools-header-wrapper">
+              <h2 data-i18n="tools_title">Herramientas clínicas de precisión para cada etapa de su cuidado</h2>
+              <p data-i18n="tools_subtitle">Desde el diagnóstico microscópico hasta la restauración dérmica avanzada</p>
+            </div>
+
+            <div class="prof-tools-interactionable-wrapper">
+              <!-- Center Visual Viewport -->
+              <div class="prof_center-image-wrapp" id="toolsViewport">
+                <div class="tool-viewport-badge">
+                  <div class="badge-dot"></div>
+                  <span id="activeToolLabel" data-i18n="tools_default_label">Evaluación dermatológica integral en consulta</span>
+                </div>
+
+                <!-- Default View -->
+                <!-- REEMPLAZAR con foto real -->
+                <img src="https://wesselconstruction.com/wp-content/uploads/2017/10/paradise-derm-treatment-room-020.jpg" alt="Centro clínico dermatológico" class="image-tools-inner is-default" />
+                <!-- 01: Dermoscopy -->
+                <!-- REEMPLAZAR con foto real -->
+                <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=1600&q=80" alt="Dermatoscopia digital" class="image-tools-inner is-dermoscopy" />
+                <!-- 02: VISIA UV Scan -->
+                <img src="https://dermaten.es/wp-content/uploads/2022/02/visia-1.jpg" alt="Análisis facial VISIA" class="image-tools-inner is-visia" />
+                <!-- 03: Fractional Laser -->
+                <img src="https://www.bclaserandskincare.com/wp-content/uploads/vancouver-fraxel-closeup-handpiece-patient-1640x800-1.jpg" alt="Láser fraccionado" class="image-tools-inner is-fractional" />
+                <!-- 04: Precision Subcision -->
+                <img src="https://www.creatingbeauty.com/wp-content/uploads/2026/04/subcision-2.webp" alt="Subcisión y plasma rico en plaquetas" class="image-tools-inner is-subcision" />
+                <!-- 05: Cryo-Ablation -->
+                <img src="http://images.squarespace-cdn.com/content/v1/61266e982104fd1fe23f9fba/d496cece-8f5d-4def-b516-eccc266674d7/cryotherapy.jpg" alt="Crioterapia dermatológica" class="image-tools-inner is-cryo" />
+                <!-- 06: Ultrasound Depth -->
+                <img src="https://imagenes.elpais.com/resizer/v2/K7JAK2M3QNMIRMHE2R6AXQEQAE.jpg?auth=b9124c7e62ce10ad650a22f63ce8ba527f652fa6f742ecb5318bb50ca9b9460b&amp;width=1960" alt="Ultrasonido para lifting" class="image-tools-inner is-ultrasound" />
+                <!-- 10: Chemical Peels -->
+                <img src="https://centroauroom.es/wp-content/uploads/2025/09/shutterstock_2621309415.webp" alt="Peeling químico médico" class="image-tools-inner is-peels" />
+                <!-- 11: Photodynamic LED -->
+                <img src="https://medsthetikshop.cl/cdn/shop/files/Terapia_de_luz_LED_facial_1_1536x1024.png?v=1775741374" alt="Terapia fotodinámica LED" class="image-tools-inner is-led" />
+              </div>
+
+              <!-- Interactive Chips Navigation -->
+              <div class="prof-tools-chips-comp">
+                <div class="tool_chip is-dermoscopy" data-i18n-label="tool_chip_dermoscopy_label" data-i18n="tool_chip_dermoscopy">
+                  Dermatoscopia
+                </div>
+                <div class="tool_chip is-visia" data-i18n-label="tool_chip_visia_label" data-i18n="tool_chip_visia">
+                  Análisis facial VISIA®
+                </div>
+                <div class="tool_chip is-fractional" data-i18n-label="tool_chip_fractional_label" data-i18n="tool_chip_fractional">
+                  Láser fraccionado
+                </div>
+                <div class="tool_chip is-subcision" data-i18n-label="tool_chip_subcision_label" data-i18n="tool_chip_subcision">
+                  Subcisión y PRP
+                </div>
+                <div class="tool_chip is-cryo" data-i18n-label="tool_chip_cryo_label" data-i18n="tool_chip_cryo">
+                  Crioterapia
+                </div>
+                <div class="tool_chip is-ultrasound" data-i18n-label="tool_chip_ultrasound_label" data-i18n="tool_chip_ultrasound">
+                  Lifting con ultrasonido
+                </div>
+                <div class="tool_chip is-peels" data-i18n-label="tool_chip_peels_label" data-i18n="tool_chip_peels">
+                  Peeling químico
+                </div>
+                <div class="tool_chip is-led" data-i18n-label="tool_chip_led_label" data-i18n="tool_chip_led">
+                  Terapia LED
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 4: CONTROL THE OUTCOME (CELLULAR DYNAMICS)
+           ========================================================================== -->
+      <section class="section_outcome" id="cellular-outcome">
+        <div class="padding-global">
+          <div class="simple-container">
+            <div class="outcome_header-wrapp">
+              <h2 data-i18n="outcome_title">Cuidado Integral de Cada Capa de la Piel</h2>
+              <p data-i18n="outcome_subtitle">
+                La epidermis, la unión dermoepidérmica y la dermis profunda reciben el estímulo adecuado para recuperar su vitalidad natural.
+              </p>
+            </div>
+
+            <div class="outcome_prlx-composition-comp">
+              <!-- Left Stack: Dermal Depth Layers -->
+              <div class="dermal-layers-stack">
+                <div class="layer-card">
+                  <div class="layer-info">
+                    <h4 data-i18n="layer1_title">Capa 01: Estrato córneo y manto ácido</h4>
+                    <p data-i18n="layer1_desc">Protección de la barrera cutánea, equilibrio del microbioma y retención de humedad.</p>
+                  </div>
+                  <div class="layer-depth-badge" data-i18n="layer1_badge">Superficie cutánea</div>
+                </div>
+
+                <div class="layer-card">
+                  <div class="layer-info">
+                    <h4 data-i18n="layer2_title">Capa 02: Capa basal y melanocitos</h4>
+                    <p data-i18n="layer2_desc">Regulación de la pigmentación para un tono más uniforme y luminoso.</p>
+                  </div>
+                  <div class="layer-depth-badge" data-i18n="layer2_badge">Epidermis profunda</div>
+                </div>
+
+                <div class="layer-card">
+                  <div class="layer-info">
+                    <h4 data-i18n="layer3_title">Capa 03: Dermis papilar y microvasculatura</h4>
+                    <p data-i18n="layer3_desc">Oxigenación de los tejidos, soporte capilar y disminución de la inflamación.</p>
+                  </div>
+                  <div class="layer-depth-badge" data-i18n="layer3_badge">Soporte dérmico</div>
+                </div>
+
+                <div class="layer-card">
+                  <div class="layer-info">
+                    <h4 data-i18n="layer4_title">Capa 04: Dermis reticular y fibras de colágeno</h4>
+                    <p data-i18n="layer4_desc">Estimulación de colágeno y elastina para mayor firmeza y elasticidad duradera.</p>
+                  </div>
+                  <div class="layer-depth-badge" data-i18n="layer4_badge">Estructura y firmeza</div>
+                </div>
+              </div>
+
+              <!-- Right Card: Qualitative Clinical Follow-Up HUD -->
+              <div class="clinical-telemetry-hud">
+                <div class="hud-header">
+                  <span class="hud-title" data-i18n="hud_title">SEGUIMIENTO CLÍNICO PERSONALIZADO</span>
+                  <div class="hud-live-tag">
+                    <span style="width: 7px; height: 7px; background: var(--color-sage-400); border-radius: 50%; display: inline-block;"></span>
+                    <span data-i18n="hud_status">ATENCIÓN CONTINUA</span>
+                  </div>
+                </div>
+
+                <div class="telemetry-metrics-grid">
+                  <div class="metric-item">
+                    <div class="metric-val" data-i18n="hud_metric1_val">Barrera Fortalecida</div>
+                    <div class="metric-label" data-i18n="hud_metric1_label">Protección contra agresores externos y pérdida de hidratación</div>
+                  </div>
+
+                  <div class="metric-item">
+                    <div class="metric-val" data-i18n="hud_metric2_val">Tono Uniforme</div>
+                    <div class="metric-label" data-i18n="hud_metric2_label">Atenuación progresiva de manchas solares y rojeces</div>
+                  </div>
+
+                  <div class="metric-item">
+                    <div class="metric-val" data-i18n="hud_metric3_val">Textura Suave</div>
+                    <div class="metric-label" data-i18n="hud_metric3_label">Renovación de la superficie cutánea y poros menos visibles</div>
+                  </div>
+
+                  <div class="metric-item">
+                    <div class="metric-val" data-i18n="hud_metric4_val">Piel Protegida</div>
+                    <div class="metric-label" data-i18n="hud_metric4_label">Hábitos y fotoprotección diaria para prevenir el fotoenvejecimiento</div>
+                  </div>
+                </div>
+
+                <div style="margin-top: 2rem; padding-top: 1.25rem; border-top: 1px solid rgba(255, 255, 255, 0.1); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
+                  <span style="font-size: 0.8rem; color: var(--color-sage-200);" data-i18n="hud_footer_note">Plan médico supervisado por la Dra. Belisa Medina</span>
+                  <button onclick="openBookingModal('Consulta de Seguimiento')" style="background: rgba(255, 255, 255, 0.12); color: #fff; padding: 0.45rem 1rem; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase;" data-i18n="hud_footer_btn">Consultar mi caso</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 5: FROM CLINICAL PROCEDURE TO PATIENT APP ROUTINE
+           ========================================================================== -->
+      <section class="section_workflow-2-app" id="workflow-app">
+        <div class="padding-global">
+          <div class="simple-container">
+            <div class="w2a_header-wrapper">
+              <p style="font-size: 0.95rem; font-weight: 700; color: var(--color-sage-700); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.75rem;" data-i18n="w2a_eyebrow">
+                Continuidad en Su Cuidado Dermatológico
+              </p>
+              <div class="w2a_header-comnp">
+                <h2 class="heading-style-xl is-workflow" id="w2aLabelLeft" data-i18n="w2a_left_label">Tratamiento en Clínica</h2>
+                <div class="w2a-toggle" id="w2aToggle" title="Alternar vista">
+                  <div class="w2a-inner-toggle-switch"></div>
+                </div>
+                <h2 class="heading-style-xl is-app-mode" id="w2aLabelRight" data-i18n="w2a_right_label">Su Rutina en Casa (App)</h2>
+              </div>
+              <p style="font-size: 1.15rem; color: var(--text-secondary-dark); margin-top: 1rem;" data-i18n="w2a_subtitle">
+                Su tratamiento en cabina se complementa con su rutina guiada en el hogar a través de nuestra aplicación para pacientes.
+              </p>
+            </div>
+
+            <!-- Dynamic 3-Card Display -->
+            <div class="w2a-cards-display" id="w2aCardsContainer">
+              <!-- Step 1 Card -->
+              <div class="w2a-card">
+                <div class="w2a-step-num" data-i18n="w2a_step1_badge">Paso 01 • Consulta y Diagnóstico</div>
+                <h3 id="card1Title">Evaluación y Diagnóstico Clínico</h3>
+                <p id="card1Desc">
+                  Análisis visual y dermatoscópico detallado para identificar las prioridades y necesidades de su piel.
+                </p>
+                <!-- REEMPLAZAR con foto real -->
+                <img id="card1Img" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80" alt="Evaluación dermatológica en consulta" class="w2a-card-img" />
+              </div>
+
+              <!-- Step 2 Card -->
+              <div class="w2a-card" style="border-color: var(--color-sage-400);">
+                <div class="w2a-step-num" style="color: var(--color-sage-700);" data-i18n="w2a_step2_badge">Paso 02 • Procedimiento en Cabina</div>
+                <h3 id="card2Title">Procedimiento Médico en Cabina</h3>
+                <p id="card2Desc">
+                  Tratamiento con aparatología o técnica dermatológica seleccionada con criterio médico.
+                </p>
+                <!-- REEMPLAZAR con foto real -->
+                <img id="card2Img" src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80" alt="Tratamiento médico dermatológico" class="w2a-card-img" />
+              </div>
+
+              <!-- Step 3 Card -->
+              <div class="w2a-card">
+                <div class="w2a-step-num" data-i18n="w2a_step3_badge">Paso 03 • Plan de Cuidado Continuo</div>
+                <h3 id="card3Title">Plan Magistral y Rutina Personalizada</h3>
+                <p id="card3Desc">
+                  Prescripción médica personalizada y formulación de activos específicos para su piel.
+                </p>
+                <!-- REEMPLAZAR con foto real -->
+                <img id="card3Img" src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&q=80" alt="Fórmulas dermatológicas personalizadas" class="w2a-card-img" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           SECTION 6: EXPLORE CLINICAL PROTOCOLS (SPLIDE CAROUSEL)
+           ========================================================================== -->
+      <section class="section_workflows-slider" id="protocols">
+        <div class="padding-global">
+          <div class="simple-container">
+            <div class="workflows-header-wrppaer">
+              <h2 data-i18n="protocols_title">Protocolos Dermatológicos Integrales</h2>
+              <p data-i18n="protocols_subtitle">
+                Planes médicos estructurados para tratar afecciones complejas con seguimiento continuo.
+              </p>
+            </div>
+
+            <div class="splide slider2 tall" id="protocolsSplide">
+              <div class="splide__track">
+                <div class="splide__list">
+
+                  <!-- Slide 1: Acne Scars -->
+                  <div class="splide__slide">
+                    <div class="slider-tall center">
+                      <div class="slider_header_info">
+                        <div class="slider_category_tag" data-i18n="proto1_category">Cicatrices de Acné y Textura</div>
+                        <h3 class="slider_heading" data-i18n="proto1_heading">Tratamiento Integral de Cicatrices</h3>
+                      </div>
+                      <div class="slider-tall_img">
+                        <!-- REEMPLAZAR con foto real -->
+                        <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=800&q=80" alt="Tratamiento de cicatrices de acné" class="slider-tall_photo" />
+                      </div>
+                      <div class="slider-tall_footer">
+                        <div class="slider-metric-text">
+                          <strong data-i18n="proto1_benefit">Piel más lisa y uniforme</strong><br />
+                          <span data-i18n="proto1_combo">Subcisión + Morpheus8® + PRP</span>
+                        </div>
+                        <button class="slider_button" onclick="openBookingModal('Tratamiento Integral de Cicatrices')" data-i18n="proto1_btn">Solicitar Cita</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Slide 2: Melasma & Pigment -->
+                  <div class="splide__slide">
+                    <div class="slider-tall center">
+                      <div class="slider_header_info">
+                        <div class="slider_category_tag" data-i18n="proto2_category">Pigmentación y Manchas</div>
+                        <h3 class="slider_heading" data-i18n="proto2_heading">Control de Melasma y Manchas</h3>
+                      </div>
+                      <div class="slider-tall_img">
+                        <!-- REEMPLAZAR con foto real -->
+                        <img src="https://images.unsplash.com/photo-1505944270255-72b8c68c6a70?auto=format&fit=crop&w=800&q=80" alt="Control de melasma y manchas" class="slider-tall_photo" />
+                      </div>
+                      <div class="slider-tall_footer">
+                        <div class="slider-metric-text">
+                          <strong data-i18n="proto2_benefit">Tono homogéneo y luminoso</strong><br />
+                          <span data-i18n="proto2_combo">Sciton BBL HERO™ + Retinoides magistrales</span>
+                        </div>
+                        <button class="slider_button" onclick="openBookingModal('Control de Melasma y Manchas')" data-i18n="proto2_btn">Solicitar Cita</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Slide 3: Neocollagenesis & Non-Surgical Lift -->
+                  <div class="splide__slide">
+                    <div class="slider-tall center">
+                      <div class="slider_header_info">
+                        <div class="slider_category_tag" data-i18n="proto3_category">Firmeza y Definición</div>
+                        <h3 class="slider_heading" data-i18n="proto3_heading">Bioestimulación y Tensado Facial</h3>
+                      </div>
+                      <div class="slider-tall_img">
+                        <!-- REEMPLAZAR con foto real -->
+                        <img src="https://api.sofwave.com/app/uploads/2025/03/Explore-our-dedicated-sections-Sofwave-scaled.webp" alt="Tensado facial no quirúrgico" class="slider-tall_photo" />
+                      </div>
+                      <div class="slider-tall_footer">
+                        <div class="slider-metric-text">
+                          <strong data-i18n="proto3_benefit">Efecto tensor sin cirugía</strong><br />
+                          <span data-i18n="proto3_combo">Sofwave™ + Bioestimuladores de colágeno</span>
+                        </div>
+                        <button class="slider_button" onclick="openBookingModal('Bioestimulación y Tensado Facial')" data-i18n="proto3_btn">Solicitar Cita</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Slide 4: Rosacea & Redness -->
+                  <div class="splide__slide">
+                    <div class="slider-tall center">
+                      <div class="slider_header_info">
+                        <div class="slider_category_tag" data-i18n="proto4_category">Salud Vascular Facial</div>
+                        <h3 class="slider_heading" data-i18n="proto4_heading">Control de Rosácea y Enrojecimiento</h3>
+                      </div>
+                      <div class="slider-tall_img">
+                        <!-- REEMPLAZAR con foto real -->
+                        <img src="https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=800&q=80" alt="Control de rosácea y vascular" class="slider-tall_photo" />
+                      </div>
+                      <div class="slider-tall_footer">
+                        <div class="slider-metric-text">
+                          <strong data-i18n="proto4_benefit">Calma el enrojecimiento y la congestión</strong><br />
+                          <span data-i18n="proto4_combo">Vbeam® Prima + Sueros calmantes</span>
+                        </div>
+                        <button class="slider_button" onclick="openBookingModal('Control de Rosácea y Enrojecimiento')" data-i18n="proto4_btn">Solicitar Cita</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Slide 5: Retinoid Cellular Renewal -->
+                  <div class="splide__slide">
+                    <div class="slider-tall center">
+                      <div class="slider_header_info">
+                        <div class="slider_category_tag" data-i18n="proto5_category">Cuidado Antiedad Preventivo</div>
+                        <h3 class="slider_heading" data-i18n="proto5_heading">Renovación Celular con Retinoides</h3>
+                      </div>
+                      <div class="slider-tall_img">
+                        <!-- REEMPLAZAR con foto real -->
+                        <img src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?auto=format&fit=crop&w=800&q=80" alt="Renovación celular con retinoides" class="slider-tall_photo" />
+                      </div>
+                      <div class="slider-tall_footer">
+                        <div class="slider-metric-text">
+                          <strong data-i18n="proto5_benefit">Renovación celular continua</strong><br />
+                          <span data-i18n="proto5_combo">Retinoides magistrales + Hidratación de barrera</span>
+                        </div>
+                        <button class="slider_button" onclick="openBookingModal('Renovación Celular con Retinoides')" data-i18n="proto5_btn">Solicitar Cita</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Slide 6: Periorbital Rejuvenation -->
+                  <div class="splide__slide">
+                    <div class="slider-tall center">
+                      <div class="slider_header_info">
+                        <div class="slider_category_tag" data-i18n="proto6_category">Área Periorbital</div>
+                        <h3 class="slider_heading" data-i18n="proto6_heading">Rejuvenecimiento de la Mirada</h3>
+                      </div>
+                      <div class="slider-tall_img">
+                        <!-- REEMPLAZAR con foto real -->
+                        <img src="https://images.unsplash.com/photo-1519699047748-de8e457a634e?auto=format&fit=crop&w=800&q=80" alt="Rejuvenecimiento de la mirada" class="slider-tall_photo" />
+                      </div>
+                      <div class="slider-tall_footer">
+                        <div class="slider-metric-text">
+                          <strong data-i18n="proto6_benefit">Mirada descansada y firme</strong><br />
+                          <span data-i18n="proto6_combo">Láser fraccionado + PRP en ojeras</span>
+                        </div>
+                        <button class="slider_button" onclick="openBookingModal('Rejuvenecimiento de la Mirada')" data-i18n="proto6_btn">Solicitar Cita</button>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <!-- Arrows -->
+              <div class="splide__arrows" style="display: flex; gap: 1rem; justify-content: flex-end; margin-top: 2rem;">
+                <button class="splide__arrow splide__arrow--prev" aria-label="Anterior">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                </button>
+                <button class="splide__arrow splide__arrow--next" aria-label="Siguiente">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==========================================================================
+           FOOTER
+           ========================================================================== -->
+      <footer class="footer">
+        <!-- Giant Top Floating Button with Node Dot -->
+        <button class="footer_cta-button-desktop" onclick="openBookingModal('Consulta General')">
+          <span data-i18n="footer_cta_btn">Agendar Cita</span>
+          <div style="width: 10px; height: 10px; border-radius: 50%; background: var(--color-active-glow); box-shadow: 0 0 8px var(--color-active-glow);"></div>
+        </button>
+
+        <div class="footer_top-content">
+          <div class="heading-style-xl" data-i18n="footer_top_left">Ciencia Médica Dermatológica</div>
+          <div class="heading-style-xxxl font-weight-extra-light">+</div>
+          <div class="heading-style-xl" data-i18n="footer_top_right">Cuidado Personalizado y Cercano</div>
+        </div>
+
+        <div class="footer-middle-content">
+          <div class="footer_links-columns">
+            <!-- Col 1: Atención Clínica -->
+            <div class="footer_ending-links-column">
+              <div class="is-footer-column-title" data-i18n="footer_col1_title">Atención Clínica</div>
+              <a class="text-link-xsmall" href="#modalities" data-i18n="footer_link_modalities">Modalidades Médicas</a>
+              <a class="text-link-xsmall" href="#clinical-tools" data-i18n="footer_link_tools">Herramientas Clínicas</a>
+              <a class="text-link-xsmall" href="#protocols" data-i18n="footer_link_protocols">Protocolos de Cuidado</a>
+              <a class="text-link-xsmall" href="javascript:void(0)" onclick="openBookingModal('Consulta Virtual')" data-i18n="footer_link_virtual">Consultas Virtuales</a>
+            </div>
+
+            <!-- Col 2: Centro Médico -->
+            <div class="footer_ending-links-column">
+              <div class="is-footer-column-title" data-i18n="footer_col2_title">Centro Médico</div>
+              <a class="text-link-xsmall" href="javascript:void(0)" onclick="openDoctorModal()" data-i18n="footer_link_doctor">Sobre la Dra. Medina</a>
+              <a class="text-link-xsmall" href="#contact" data-i18n="footer_link_hours">Horario y Ubicación</a>
+            </div>
+
+            <!-- Col 3: Pacientes -->
+            <div class="footer_ending-links-column">
+              <div class="is-footer-column-title" data-i18n="footer_col3_title">Pacientes</div>
+              <a class="text-link-xsmall" href="javascript:void(0)" onclick="openRoutineModal()" data-i18n="footer_link_routine">Mi Rutina</a>
+              <a class="text-link-xsmall" href="javascript:void(0)" onclick="openBookingModal('Consulta Dermatológica')" data-i18n="footer_link_book">Reservar Cita</a>
+              <a class="text-link-xsmall" href="https://wa.me/18498754464" target="_blank" rel="noopener noreferrer" data-i18n="footer_link_whatsapp">WhatsApp Directo</a>
+              <a class="text-link-xsmall" href="https://www.instagram.com/dra.belisamedina/" target="_blank" rel="noopener noreferrer" data-i18n="footer_link_instagram">Instagram</a>
+            </div>
+
+            <!-- Col 4: Contacto y Ubicación -->
+            <div class="footer_ending-links-column" id="contact">
+              <div class="is-footer-column-title" data-i18n="footer_col4_title">Contacto y Ubicación</div>
+              <div class="text-link-xsmall" data-i18n="footer_address">Naco, Santo Domingo, República Dominicana</div>
+              <a class="text-link-xsmall" href="tel:+18498754464" data-i18n="footer_phone">Teléfono: 849-875-4464</a>
+              <a class="text-link-xsmall" href="https://wa.me/18498754464" target="_blank" rel="noopener noreferrer" data-i18n="footer_whatsapp">WhatsApp: 849-875-4464</a>
+              <a class="text-link-xsmall" href="mailto:info@centrodramedina.com" data-i18n="footer_email">Correo: info@centrodramedina.com</a>
+              <div class="text-link-xsmall" data-i18n="footer_hours">Horario: 8:00 a. m. – 6:00 p. m.</div>
+              <div class="text-link-xsmall" style="color: var(--color-sage-200); font-weight: 600;" data-i18n="footer_consult_types">Consultas presenciales y virtuales</div>
+            </div>
+          </div>
+
+          <!-- Social Links: ONLY Instagram & WhatsApp -->
+          <div class="footer-social-links">
+            <div class="footer-social-row">
+              <a aria-label="Instagram de la Dra. Belisa Medina" class="footer_social-link" href="https://www.instagram.com/dra.belisamedina/" target="_blank" rel="noopener noreferrer" title="Instagram">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a aria-label="WhatsApp de la Dra. Belisa Medina" class="footer_social-link" href="https://wa.me/18498754464" target="_blank" rel="noopener noreferrer" title="WhatsApp">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+                </svg>
+              </a>
+            </div>
+
+            <!-- Language Switcher in Footer -->
+            <div class="lang-toggle-wrap">
+              <button type="button" class="lang-btn active" data-lang-btn="es" onclick="window.i18n.setLanguage('es')">ES</button>
+              <span class="lang-divider">|</span>
+              <button type="button" class="lang-btn" data-lang-btn="en" onclick="window.i18n.setLanguage('en')">EN</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Real Credentials Text Badges -->
+        <div class="footer_bottom-badges">
+          <div class="accreditation-icon-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-sage-400)" stroke-width="2">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+            <span data-i18n="footer_badge1">Médica egresada de UNIBE</span>
+          </div>
+
+          <div class="accreditation-icon-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-sage-400)" stroke-width="2">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <span data-i18n="footer_badge2">Residencia en Dermatología — Instituto Dermatológico Dominicano y Cirugía de Piel (IDCP)</span>
+          </div>
+
+          <div class="accreditation-icon-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-sage-400)" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            <span data-i18n="footer_badge3">Miembro de la Sociedad Dominicana de Dermatología</span>
+          </div>
+
+          <div class="accreditation-icon-badge">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-sage-400)" stroke-width="2">
+              <circle cx="12" cy="8" r="7"></circle>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+            </svg>
+            <span data-i18n="footer_badge4">Máster en Toxina Botulínica — México</span>
+          </div>
+        </div>
+
+        <div class="all-rights-text">
+          <p style="margin-bottom: 0.5rem;" data-i18n="footer_disclaimer">La información de este sitio es educativa y no reemplaza una consulta médica.</p>
+          <p data-i18n="footer_copyright">© 2026 Centro Clínico de la Dra. Belisa Medina. Todos los derechos reservados.</p>
+        </div>
+      </footer>
+
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 1: CONSULTATION BOOKING & WHATSAPP REDIRECT
+       ========================================================================== -->
+  <div class="modal-backdrop" id="bookingModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="closeBookingModal()">&times;</button>
+      <div class="modal-header">
+        <h3 data-i18n="modal_book_title">Solicitar Consulta Dermatológica</h3>
+        <p data-i18n="modal_book_desc">Diligencie sus datos y le abriremos WhatsApp para confirmar su cita con el equipo de la Dra. Belisa Medina.</p>
+      </div>
+
+      <form id="consultationForm" onsubmit="handleBookingSubmit(event)">
+        <div class="form-group">
+          <label class="form-label" data-i18n="form_name_label">Nombre Completo</label>
+          <input type="text" class="form-input" id="bookingName" required placeholder="Ej. Ana Pérez" data-i18n-placeholder="form_name_placeholder" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-i18n="form_phone_label">Teléfono / WhatsApp</label>
+          <input type="tel" class="form-input" id="bookingPhone" required placeholder="849-000-0000" data-i18n-placeholder="form_phone_placeholder" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-i18n="form_email_label">Correo Electrónico (opcional)</label>
+          <input type="email" class="form-input" id="bookingEmail" placeholder="nombre@ejemplo.com" data-i18n-placeholder="form_email_placeholder" />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-i18n="form_treatment_label">Motivo de Consulta o Tratamiento</label>
+          <select class="form-select" id="treatmentSelect">
+            <option value="Consulta Dermatológica General" data-i18n="opt_general">Consulta Dermatológica General</option>
+            <option value="Cicatrices de Acné y Textura" data-i18n="opt_acne">Cicatrices de Acné y Textura</option>
+            <option value="Melasma y Manchas Solares" data-i18n="opt_melasma">Melasma y Manchas Solares</option>
+            <option value="Morpheus8®: Radiofrecuencia Fraccionada" data-i18n="opt_morpheus">Morpheus8®: Radiofrecuencia Fraccionada</option>
+            <option value="Fraxel® DUAL: Renovación Cutánea" data-i18n="opt_fraxel">Fraxel® DUAL: Renovación Cutánea</option>
+            <option value="Sofwave™: Ultrasonido y Tensado Facial" data-i18n="opt_sofwave">Sofwave™: Ultrasonido y Tensado Facial</option>
+            <option value="Rosácea y Láser Vascular Vbeam®" data-i18n="opt_rosacea">Rosácea y Láser Vascular Vbeam®</option>
+            <option value="Dermatoscopia y Revisión de Lunares" data-i18n="opt_moles">Dermatoscopia y Revisión de Lunares</option>
+            <option value="Rellenos de Ácido Hialurónico" data-i18n="opt_fillers">Rellenos de Ácido Hialurónico</option>
+            <option value="Toxina Botulínica" data-i18n="opt_botox">Toxina Botulínica</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" data-i18n="form_date_label">Fecha Preferida y Modalidad</label>
+          <div style="display: grid; grid-template-columns: 1.4fr 1fr; gap: 0.75rem;">
+            <input type="date" class="form-input" required id="bookingDate" />
+            <select class="form-select" id="bookingFormat">
+              <option value="Presencial" data-i18n="form_format_presencial">Presencial</option>
+              <option value="Virtual" data-i18n="form_format_virtual">Virtual</option>
+            </select>
+          </div>
+        </div>
+
+        <button type="submit" class="form-submit-btn" data-i18n="form_submit_btn">
+          Continuar por WhatsApp
+        </button>
+
+        <div class="form-confirmation-box" id="bookingConfirmation" data-i18n="form_confirmation_msg">
+          Le abrimos WhatsApp para confirmar su cita. Horario de atención: 8:00 a. m. – 6:00 p. m.
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 2: SOBRE LA DRA. BELISA MEDINA
+       ========================================================================== -->
+  <div class="modal-backdrop" id="doctorModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="closeDoctorModal()">&times;</button>
+      <div class="modal-header">
+        <h3 data-i18n="modal_doctor_title">Dra. Belisa Medina</h3>
+        <p style="font-weight: 600; color: var(--color-sage-700); margin-bottom: 1rem;" data-i18n="modal_doctor_subtitle">Dermatología Clínica y Estética</p>
+        <p data-i18n="modal_doctor_p1">La Dra. Belisa Medina es médica especialista en dermatología, dedicada al diagnóstico y tratamiento integral de afecciones de la piel, pelo y uñas, así como al rejuvenecimiento estético armónico.</p>
+      </div>
+
+      <ul class="modal-bullet-list">
+        <li class="modal-bullet-item">
+          <svg class="modal-bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span data-i18n="modal_doctor_cred1">Médica egresada de la Universidad Iberoamericana (UNIBE).</span>
+        </li>
+        <li class="modal-bullet-item">
+          <svg class="modal-bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span data-i18n="modal_doctor_cred2">Especialidad y Residencia en Dermatología en el Instituto Dermatológico Dominicano y Cirugía de Piel «Dr. Huberto Bogaert Díaz» (IDCP).</span>
+        </li>
+        <li class="modal-bullet-item">
+          <svg class="modal-bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span data-i18n="modal_doctor_cred3">Miembro activo de la Sociedad Dominicana de Dermatología.</span>
+        </li>
+        <li class="modal-bullet-item">
+          <svg class="modal-bullet-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          <span data-i18n="modal_doctor_cred4">Máster en Toxina Botulínica — México.</span>
+        </li>
+      </ul>
+
+      <div class="modal-info-card">
+        <strong style="color: var(--color-obsidian-900); display: block; margin-bottom: 0.35rem;" data-i18n="modal_doctor_loc_title">Consultorio y Horarios</strong>
+        <div data-i18n="modal_doctor_loc">Naco, Santo Domingo, República Dominicana</div>
+        <div data-i18n="modal_doctor_hours">Horario: Lunes a viernes, 8:00 a. m. – 6:00 p. m.</div>
+        <div data-i18n="modal_doctor_formats">Modalidades: Consultas presenciales y virtuales</div>
+      </div>
+
+      <button type="button" class="form-submit-btn" onclick="closeDoctorModal(); openBookingModal('Consulta con la Dra. Medina')" data-i18n="modal_doctor_btn">
+        Reservar Cita con la Dra. Medina
+      </button>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MODAL 3: MI RUTINA (PATIENT APP EXPLANATION)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="routineModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" onclick="closeRoutineModal()">&times;</button>
+      <div class="modal-header">
+        <h3 data-i18n="modal_routine_title">Su Rutina Personalizada</h3>
+        <p style="font-weight: 600; color: var(--color-sage-700); margin-bottom: 1rem;" data-i18n="modal_routine_subtitle">Acceso exclusivo para pacientes de la Dra. Belisa Medina</p>
+      </div>
+
+      <div style="font-size: 0.95rem; color: var(--text-secondary-dark); line-height: 1.6; margin-bottom: 1.5rem;">
+        <p style="margin-bottom: 1rem;" data-i18n="modal_routine_p1">
+          Al concluir su consulta médica (presencial o virtual), le enviamos a su WhatsApp un enlace personal con su rutina de cuidado facial.
+        </p>
+        <p style="margin-bottom: 1rem;" data-i18n="modal_routine_p2">
+          En su app personal podrá ver sus productos de día y de noche, notas médicas de la doctora, fotos de referencia y el conteo de días restantes de cada tratamiento.
+        </p>
+        <div class="modal-info-card" data-i18n="modal_routine_p3">
+          ¿Perdió o no encuentra el enlace de su rutina? Escríbanos por WhatsApp y con gusto se lo reenviamos a la brevedad.
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+        <a class="form-submit-btn" href="https://wa.me/18498754464?text=Hola,%20deseo%20solicitar%20el%20enlace%20de%20mi%20rutina%20personalizada." target="_blank" rel="noopener noreferrer" style="text-align: center; text-decoration: none;" data-i18n="modal_routine_btn">
+          Solicitar Enlace por WhatsApp
+        </a>
+        <button type="button" onclick="closeRoutineModal()" style="padding: 0.65rem; color: var(--text-muted-dark); font-size: 0.88rem; font-weight: 600;" data-i18n="modal_routine_close">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts: i18n loaded first, then app.js -->
+  <script src="i18n.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
