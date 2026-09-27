@@ -1,14 +1,16 @@
 /**
  * Centro Clínico de la Dra. Belisa Medina
  * Main Client Script
- * Features: Draggable Clinical Nodes & LeaderLine, Modalities ScrollTrigger,
+ * Features: Modalities ScrollTrigger,
  * Clinical Tools Switcher, Patient App Routine Toggle, Splide Carousel,
  * Modals & WhatsApp Booking Flow.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
-  // 1. Initialize LeaderLine & Draggable Clinical Nodes
-  initDraggableNodes();
+  initHeroEntrance();
+
+  // 1. Initialize Before-and-After Comparison
+  initBeforeAfterCarousel();
 
   // 2. Initialize Modalities Sticky ScrollTrigger
   initModalitiesScroll();
@@ -28,6 +30,50 @@ document.addEventListener('DOMContentLoaded', () => {
   // 7. Set Min Date for Booking to Today
   initBookingDatePicker();
 });
+
+function initHeroEntrance() {
+  const hero = document.querySelector('.section-hero');
+  if (!hero || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+  try {
+    if (sessionStorage.getItem('belisaHeroEntrancePlayed')) return;
+    sessionStorage.setItem('belisaHeroEntrancePlayed', 'true');
+  } catch {}
+
+  hero.classList.add('is-entering');
+}
+
+function initBeforeAfterCarousel() {
+  const frame = document.getElementById('comparisonFrame');
+  const range = document.getElementById('comparisonRange');
+  const caseLabel = document.getElementById('comparisonCase');
+  const caseCount = document.getElementById('comparisonCount');
+  const previousButton = document.getElementById('comparisonPrev');
+  const nextButton = document.getElementById('comparisonNext');
+  if (!frame || !range || !caseLabel || !caseCount || !previousButton || !nextButton) return;
+
+  const cases = ['results_case_1', 'results_case_2', 'results_case_3'];
+  let activeCase = 0;
+
+  function updateComparison() {
+    frame.style.setProperty('--comparison-position', `${range.value}%`);
+  }
+
+  function updateCase(direction) {
+    activeCase = (activeCase + direction + cases.length) % cases.length;
+    frame.dataset.case = String(activeCase + 1);
+    range.value = '50';
+    caseLabel.setAttribute('data-i18n', cases[activeCase]);
+    caseLabel.textContent = window.i18n ? window.i18n.t(cases[activeCase]) : `Case ${String(activeCase + 1).padStart(2, '0')}`;
+    caseCount.textContent = `${String(activeCase + 1).padStart(2, '0')} / ${String(cases.length).padStart(2, '0')}`;
+    updateComparison();
+  }
+
+  range.addEventListener('input', updateComparison);
+  previousButton.addEventListener('click', () => updateCase(-1));
+  nextButton.addEventListener('click', () => updateCase(1));
+  updateComparison();
+}
 
 /* ==========================================================================
    1. HERO DRAGGABLE CLINICAL NODES & LEADERLINE CABLES
@@ -299,18 +345,24 @@ const dataWorkflow = {
   es: {
     c1Title: 'Evaluación y Diagnóstico Clínico',
     c1Desc: 'Análisis visual y dermatoscópico detallado para identificar las prioridades y necesidades de su piel.',
+    c1Image: ':imagenes/evaluacionydiagnostico.png',
     c2Title: 'Procedimiento Médico en Cabina',
     c2Desc: 'Tratamiento con aparatología o técnica dermatológica seleccionada con criterio médico.',
+    c2Image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80',
     c3Title: 'Plan Magistral y Rutina Personalizada',
-    c3Desc: 'Prescripción médica personalizada y formulación de activos específicos para su piel.'
+    c3Desc: 'Prescripción médica personalizada y formulación de activos específicos para su piel.',
+    c3Image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&q=80'
   },
   en: {
     c1Title: 'Comprehensive Skin Evaluation',
     c1Desc: 'Detailed visual and dermoscopic examination to identify your skin priorities.',
+    c1Image: ':imagenes/evaluacionydiagnostico.png',
     c2Title: 'Personalized Medical Treatment',
     c2Desc: 'Procedure with medical device or clinical technique tailored with medical judgment.',
+    c2Image: 'https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?auto=format&fit=crop&w=600&q=80',
     c3Title: 'Prescription & Routine Guidance',
-    c3Desc: 'Tailored medical prescription and specific topical active ingredients for your skin.'
+    c3Desc: 'Tailored medical prescription and specific topical active ingredients for your skin.',
+    c3Image: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?auto=format&fit=crop&w=600&q=80'
   }
 };
 
@@ -318,18 +370,24 @@ const dataAppMode = {
   es: {
     c1Title: 'Su Rutina en la Palma de Su Mano',
     c1Desc: 'Al terminar su consulta, recibe un enlace exclusivo por WhatsApp con su rutina matutina y nocturna paso a paso.',
+    c1Image: ':imagenes/paul-hanaoka-HbyYFFokvm0-unsplash.jpg',
     c2Title: 'Fotos, Dosis y Notas Médicas',
     c2Desc: 'Visualice sus productos con foto, notas de la doctora y el conteo de días restantes de cada tratamiento prescrito.',
+    c2Image: ':imagenes/Fotos, Dosis y Notas.png',
     c3Title: 'Marque Cada Paso Realizado',
-    c3Desc: 'Marque sus pasos diarios completados y mantenga la disciplina necesaria para ver resultados duraderos.'
+    c3Desc: 'Marque sus pasos diarios completados y mantenga la disciplina necesaria para ver resultados duraderos.',
+    c3Image: ':imagenes/Marque Cada Paso.png'
   },
   en: {
     c1Title: 'Your Routine in Your Pocket',
     c1Desc: 'After your consultation, you receive a personal link on WhatsApp with your step-by-step morning and evening routine.',
+    c1Image: ':imagenes/paul-hanaoka-HbyYFFokvm0-unsplash.jpg',
     c2Title: 'Photos, Doses & Doctor\'s Notes',
     c2Desc: 'See your prescribed products with photos, doctor\'s notes, and remaining days for each treatment.',
+    c2Image: ':imagenes/Fotos, Dosis y Notas.png',
     c3Title: 'Check Off Every Step',
-    c3Desc: 'Check off your daily skincare steps to build the consistency required for lasting skin health.'
+    c3Desc: 'Check off your daily skincare steps to build the consistency required for lasting skin health.',
+    c3Image: ':imagenes/Marque Cada Paso.png'
   }
 };
 
@@ -339,10 +397,13 @@ function renderWorkflowCards() {
 
   const card1Title = document.getElementById('card1Title');
   const card1Desc = document.getElementById('card1Desc');
+  const card1Image = document.getElementById('card1Img');
   const card2Title = document.getElementById('card2Title');
   const card2Desc = document.getElementById('card2Desc');
+  const card2Image = document.getElementById('card2Img');
   const card3Title = document.getElementById('card3Title');
   const card3Desc = document.getElementById('card3Desc');
+  const card3Image = document.getElementById('card3Img');
 
   if (!card1Title || !card2Title || !card3Title) return;
 
@@ -354,10 +415,16 @@ function renderWorkflowCards() {
       onComplete: () => {
         card1Title.textContent = current.c1Title;
         card1Desc.textContent = current.c1Desc;
+        card1Image.src = current.c1Image;
+        card1Image.alt = current.c1Title;
         card2Title.textContent = current.c2Title;
         card2Desc.textContent = current.c2Desc;
+        card2Image.src = current.c2Image;
+        card2Image.alt = current.c2Title;
         card3Title.textContent = current.c3Title;
         card3Desc.textContent = current.c3Desc;
+        card3Image.src = current.c3Image;
+        card3Image.alt = current.c3Title;
 
         gsap.to(['#card1Title', '#card1Desc', '#card2Title', '#card2Desc', '#card3Title', '#card3Desc'], {
           opacity: 1,
@@ -369,10 +436,16 @@ function renderWorkflowCards() {
   } else {
     card1Title.textContent = current.c1Title;
     card1Desc.textContent = current.c1Desc;
+    card1Image.src = current.c1Image;
+    card1Image.alt = current.c1Title;
     card2Title.textContent = current.c2Title;
     card2Desc.textContent = current.c2Desc;
+    card2Image.src = current.c2Image;
+    card2Image.alt = current.c2Title;
     card3Title.textContent = current.c3Title;
     card3Desc.textContent = current.c3Desc;
+    card3Image.src = current.c3Image;
+    card3Image.alt = current.c3Title;
   }
 }
 

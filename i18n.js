@@ -8,11 +8,11 @@
   const translations = {
     es: {
       // Document metadata
-      page_title: "Centro Clínico de la Dra. Belisa Medina | Dermatología Clínica y Estética en Santo Domingo",
-      meta_description: "Centro Clínico de la Dra. Belisa Medina en Naco, Santo Domingo. Atención dermatológica clínica y estética basada en evidencia, tecnología avanzada y rutinas personalizadas.",
+      page_title: "Centro Dermatológico de la Dra. Belisa Medina | Dermatología Clínica y Estética en Santo Domingo",
+      meta_description: "Centro Dermatológico de la Dra. Belisa Medina en Naco, Santo Domingo. Atención dermatológica clínica y estética basada en evidencia, tecnología avanzada y rutinas personalizadas.",
 
       // Top Announcement Banner
-      banner_announcement: "CENTRO CLÍNICO DE LA DRA. BELISA MEDINA • Dermatóloga • Naco, Santo Domingo",
+      banner_announcement: "CENTRO DERMATOLÓGICO DE LA DRA. BELISA MEDINA • Dermatóloga • Naco, Santo Domingo",
       banner_cta: "Reservar Cita",
       banner_disclaimer: "Consultas presenciales y virtuales.",
       banner_view_protocols: "Ver Protocolos",
@@ -22,7 +22,7 @@
       brand_subtext: "Dermatología Clínica y Estética",
       nav_modalities: "MODALIDADES",
       nav_tools: "HERRAMIENTAS",
-      nav_cellular: "CIENCIA CELULAR",
+      nav_cellular: "RESULTADOS",
       nav_system: "SISTEMA DE CUIDADO",
       nav_protocols: "PROTOCOLOS",
       nav_routine: "MI RUTINA",
@@ -30,12 +30,40 @@
 
       // Hero Section
       hero_badge: "Dermatóloga • Miembro de la Sociedad Dominicana de Dermatología • Atención basada en evidencia",
-      hero_h1_prefix: "Centro Clínico de la Dra. Belisa Medina",
+      doctor_hero_eyebrow: "DERMATOLOGÍA MÉDICA • SANTO DOMINGO",
+      doctor_hero_specialty: "Medicina Estética",
+      doctor_hero_tagline: "Cuidado refinado. Resultados naturales.",
+      doctor_hero_support: "Tratamientos médicos personalizados que realzan su belleza natural con precisión, criterio y discreción.",
+      doctor_hero_cta: "Explorar tratamientos",
+      hero_h1_prefix: "Centro Dermatológico de la Dra. Belisa Medina",
       hero_h1_highlight: "Dermatología Clínica y Estética",
       hero_description: "Atención dermatológica médica y estética de excelencia en Santo Domingo. Unimos diagnóstico avanzado, farmacología personalizada y aparatología de vanguardia para la salud y belleza de su piel.",
       hero_indicator_badge: "Lienzo interactivo",
       hero_indicator_text: "Arrastre los nodos para explorar la secuencia de atención",
       canvas_drag_hint: "Nodos interactivos: Clic y arrastre",
+      doctor_name: "Dra. Belisa Medina",
+      doctor_profile_lead: "Medicina dermatológica con criterio y cercanía.",
+      doctor_photo_placeholder: "Fotografía de la Dra. Belisa Medina",
+      doctor_credential_label_1: "Formación médica",
+      doctor_credential_label_2: "Especialidad",
+      doctor_credential_label_3: "Membresía",
+      doctor_credential_label_4: "Formación avanzada",
+      doctor_credential_1: "Médica egresada de UNIBE",
+      doctor_credential_2: "Especialista en Dermatología, IDCP",
+      doctor_credential_3: "Miembro de la Sociedad Dominicana de Dermatología",
+      doctor_credential_4: "Máster en Toxina Botulínica, México",
+      results_eyebrow: "Resultados clínicos",
+      results_title: "Antes y después",
+      results_subtitle: "Deslice cada imagen para comparar. Los casos se añadirán próximamente.",
+      results_before: "Antes",
+      results_after: "Después",
+      results_photo_placeholder: "Imagen pendiente",
+      results_case_1: "Caso 01",
+      results_case_2: "Caso 02",
+      results_case_3: "Caso 03",
+      results_previous: "Caso anterior",
+      results_next: "Caso siguiente",
+      results_slider_aria: "Deslizar para comparar antes y después",
 
       // Hero Connected Nodes
       node1_category: "01. Diagnóstico",
@@ -246,7 +274,7 @@
       footer_badge4: "Máster en Toxina Botulínica — México",
 
       footer_disclaimer: "La información de este sitio es educativa y no reemplaza una consulta médica.",
-      footer_copyright: "© 2026 Centro Clínico de la Dra. Belisa Medina. Todos los derechos reservados.",
+      footer_copyright: "© 2026 Centro Dermatológico de la Dra. Belisa Medina. Todos los derechos reservados.",
 
       // Booking Modal
       modal_book_title: "Solicitar Consulta Dermatológica",
@@ -302,11 +330,11 @@
 
     en: {
       // Document metadata
-      page_title: "Centro Clínico de la Dra. Belisa Medina | Clinical & Aesthetic Dermatology in Santo Domingo",
-      meta_description: "Dr. Belisa Medina Clinical Center in Naco, Santo Domingo. Evidence-based clinical and aesthetic dermatology, advanced technology, and personalized skincare routines.",
+      page_title: "Dr. Belisa Medina Dermatology Center | Clinical & Aesthetic Dermatology in Santo Domingo",
+      meta_description: "Dr. Belisa Medina Dermatology Center in Naco, Santo Domingo. Evidence-based clinical and aesthetic dermatology, advanced technology, and personalized skincare routines.",
 
       // Top Announcement Banner
-      banner_announcement: "DRA. BELISA MEDINA CLINICAL CENTER • Dermatologist • Naco, Santo Domingo",
+      banner_announcement: "DRA. BELISA MEDINA DERMATOLOGY CENTER • Dermatologist • Naco, Santo Domingo",
       banner_cta: "Book Appointment",
       banner_disclaimer: "In-person & virtual consultations.",
       banner_view_protocols: "View Protocols",
@@ -316,7 +344,7 @@
       brand_subtext: "Clinical & Aesthetic Dermatology",
       nav_modalities: "MODALITIES",
       nav_tools: "CLINICAL TOOLS",
-      nav_cellular: "CELLULAR SCIENCE",
+      nav_cellular: "RESULTS",
       nav_system: "CARE SYSTEM",
       nav_protocols: "PROTOCOLS",
       nav_routine: "MY ROUTINE",
@@ -324,12 +352,40 @@
 
       // Hero Section
       hero_badge: "Dermatologist • Member of the Dominican Society of Dermatology • Evidence-based care",
-      hero_h1_prefix: "Dr. Belisa Medina Clinical Center",
+      doctor_hero_eyebrow: "MEDICAL DERMATOLOGY • SANTO DOMINGO",
+      doctor_hero_specialty: "Medical Aesthetics",
+      doctor_hero_tagline: "Refined care. Natural results.",
+      doctor_hero_support: "Personalized, physician-led treatments designed to enhance your natural features with precision and discretion.",
+      doctor_hero_cta: "Explore treatments",
+      hero_h1_prefix: "Dr. Belisa Medina Dermatology Center",
       hero_h1_highlight: "Clinical & Aesthetic Dermatology",
       hero_description: "Premier medical and aesthetic dermatology care in Santo Domingo. We unite advanced diagnosis, personalized pharmacology, and state-of-the-art technology for the health and beauty of your skin.",
       hero_indicator_badge: "Interactive canvas",
       hero_indicator_text: "Drag the nodes below to explore the care sequence",
       canvas_drag_hint: "Interactive nodes: Click & drag",
+      doctor_name: "Dr. Belisa Medina",
+      doctor_profile_lead: "Thoughtful dermatology. Care that feels personal.",
+      doctor_photo_placeholder: "Photo of Dr. Belisa Medina",
+      doctor_credential_label_1: "Medical education",
+      doctor_credential_label_2: "Specialty",
+      doctor_credential_label_3: "Membership",
+      doctor_credential_label_4: "Advanced training",
+      doctor_credential_1: "Medical degree from UNIBE",
+      doctor_credential_2: "Dermatology specialist, IDCP",
+      doctor_credential_3: "Member of the Dominican Society of Dermatology",
+      doctor_credential_4: "Master's in Botulinum Toxin, Mexico",
+      results_eyebrow: "Clinical results",
+      results_title: "Before and after",
+      results_subtitle: "Slide each image to compare. Cases will be added soon.",
+      results_before: "Before",
+      results_after: "After",
+      results_photo_placeholder: "Photo pending",
+      results_case_1: "Case 01",
+      results_case_2: "Case 02",
+      results_case_3: "Case 03",
+      results_previous: "Previous case",
+      results_next: "Next case",
+      results_slider_aria: "Slide to compare before and after",
 
       // Hero Connected Nodes
       node1_category: "01. Diagnostic",
@@ -540,7 +596,7 @@
       footer_badge4: "Master's in Botulinum Toxin — Mexico",
 
       footer_disclaimer: "The information on this site is educational and does not replace medical consultation.",
-      footer_copyright: "© 2026 Centro Clínico de la Dra. Belisa Medina. All rights reserved.",
+      footer_copyright: "© 2026 Dr. Belisa Medina Dermatology Center. All rights reserved.",
 
       // Booking Modal
       modal_book_title: "Request Dermatological Consultation",

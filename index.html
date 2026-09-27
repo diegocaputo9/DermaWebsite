@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title data-i18n="page_title">Centro Clínico de la Dra. Belisa Medina | Dermatología Clínica y Estética en Santo Domingo</title>
-  <meta name="description" content="Centro Clínico de la Dra. Belisa Medina en Naco, Santo Domingo. Atención dermatológica clínica y estética basada en evidencia, tecnología avanzada y rutinas personalizadas." />
+  <title data-i18n="page_title">Centro Dermatológico de la Dra. Belisa Medina | Dermatología Clínica y Estética en Santo Domingo</title>
+  <meta name="description" content="Centro Dermatológico de la Dra. Belisa Medina en Naco, Santo Domingo. Atención dermatológica clínica y estética basada en evidencia, tecnología avanzada y rutinas personalizadas." />
 
   <!-- Google Fonts: Newsreader (Headings) & DM Sans (Body) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,11 +20,6 @@
   <!-- GSAP & Plugins -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/Draggable.min.js"></script>
-
-  <!-- LeaderLine for Fluid Connecting Node Cables -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/leader-line/1.0.3/leader-line.min.js"></script>
-
   <!-- Splide Slider JS -->
   <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.2.2/dist/js/splide.min.js"></script>
 </head>
@@ -82,7 +77,6 @@
             <nav class="nav-links-wrapper">
               <a class="nav_text-link" href="#modalities" data-i18n="nav_modalities">MODALIDADES</a>
               <a class="nav_text-link" href="#clinical-tools" data-i18n="nav_tools">HERRAMIENTAS</a>
-              <a class="nav_text-link" href="#cellular-outcome" data-i18n="nav_cellular">CIENCIA CELULAR</a>
               <a class="nav_text-link" href="#workflow-app" data-i18n="nav_system">SISTEMA DE CUIDADO</a>
               <a class="nav_text-link" href="#protocols" data-i18n="nav_protocols">PROTOCOLOS</a>
               <a class="nav_text-link is-routine" href="javascript:void(0)" onclick="openRoutineModal()" data-i18n="nav_routine">MI RUTINA</a>
@@ -108,21 +102,40 @@
            ========================================================================== -->
       <section class="section-hero">
         <div class="grid-container is-hero">
-          <div class="hero-header-wrap">
-            <div class="trust-badge-hero">
-              <span class="dot"></span>
-              <span data-i18n="hero_badge">Dermatóloga • Miembro de la Sociedad Dominicana de Dermatología • Atención basada en evidencia</span>
-            </div>
-            <h1 class="heading_h1-hero">
-              <span data-i18n="hero_h1_prefix">Centro Clínico de la Dra. Belisa Medina</span><br />
-              <span class="gradient-text" data-i18n="hero_h1_highlight">Dermatología Clínica y Estética</span>
-            </h1>
-            <p class="text-size-large" data-i18n="hero_description">
-              Atención dermatológica médica y estética de excelencia en Santo Domingo. Unimos diagnóstico avanzado, farmacología personalizada y aparatología de vanguardia para la salud y belleza de su piel.
-            </p>
-            <div class="sub-hero-indicator">
-              <span class="badge" data-i18n="hero_indicator_badge">Lienzo interactivo</span>
-              <span data-i18n="hero_indicator_text">Arrastre los nodos para explorar la secuencia de atención</span>
+          <div class="doctor-hero">
+            <div class="doctor-hero-content">
+              <div class="doctor-hero-copy">
+                <p class="doctor-hero-eyebrow" data-i18n="doctor_hero_eyebrow">DERMATOLOGÍA MÉDICA · SANTO DOMINGO</p>
+                <h1 class="doctor-hero-name" data-i18n="doctor_name">Dra. Belisa Medina</h1>
+                <p class="doctor-hero-specialty" data-i18n="doctor_hero_specialty">Medicina Estética</p>
+                <p class="doctor-profile-lead" data-i18n="doctor_hero_tagline">Cuidado refinado. Resultados naturales.</p>
+                <p class="doctor-hero-description" data-i18n="doctor_hero_support">Tratamientos médicos personalizados que realzan su belleza natural con precisión, criterio y discreción.</p>
+                <a class="doctor-hero-cta" href="#modalities">
+                  <span data-i18n="doctor_hero_cta">Explorar tratamientos</span>
+                  <span class="doctor-hero-cta-arrow" aria-hidden="true">↗</span>
+                </a>
+                <ul class="doctor-credentials hero-credentials">
+                  <li>
+                    <span class="credential-label" data-i18n="doctor_credential_label_1">Formación médica</span>
+                    <span class="credential-detail" data-i18n="doctor_credential_1">Médica egresada de UNIBE</span>
+                  </li>
+                  <li>
+                    <span class="credential-label" data-i18n="doctor_credential_label_2">Especialidad</span>
+                    <span class="credential-detail" data-i18n="doctor_credential_2">Especialista en Dermatología, IDCP</span>
+                  </li>
+                  <li>
+                    <span class="credential-label" data-i18n="doctor_credential_label_3">Membresía</span>
+                    <span class="credential-detail" data-i18n="doctor_credential_3">Miembro de la Sociedad Dominicana de Dermatología</span>
+                  </li>
+                  <li>
+                    <span class="credential-label" data-i18n="doctor_credential_label_4">Formación avanzada</span>
+                    <span class="credential-detail" data-i18n="doctor_credential_4">Máster en Toxina Botulínica, México</span>
+                  </li>
+                </ul>
+              </div>
+              <figure class="doctor-portrait-frame">
+                <img src=":imagenes/dra.belisa.medina.nobackground.png" alt="Dra. Belisa Medina, dermatóloga" class="doctor-portrait" fetchpriority="high" />
+              </figure>
             </div>
           </div>
 
@@ -342,8 +355,6 @@
         <!-- Background Layers Synchronized to Active Modality -->
         <div class="models_bg-image-layer">
           <div class="image-overlay-layer"></div>
-          <div class="overlay-section-top"></div>
-          <div class="overlay-section-bottom"></div>
 
           <!-- Modality Background 0: Candela -->
           <img src="https://soleabrickellspa.com/wp-content/uploads/2026/04/Candela-GentleMax-Pro-Laser-Treatments.webp" alt="Candela GentleMax Pro" class="models_bg-image active" />
@@ -448,10 +459,32 @@
         <div class="padding-global">
           <div class="simple-container">
             <div class="outcome_header-wrapp">
-              <h2 data-i18n="outcome_title">Cuidado Integral de Cada Capa de la Piel</h2>
-              <p data-i18n="outcome_subtitle">
-                La epidermis, la unión dermoepidérmica y la dermis profunda reciben el estímulo adecuado para recuperar su vitalidad natural.
-              </p>
+              <span class="results-eyebrow" data-i18n="results_eyebrow">Resultados clínicos</span>
+              <h2 data-i18n="results_title">Antes y después</h2>
+              <p data-i18n="results_subtitle">Deslice cada imagen para comparar. Los casos se añadirán próximamente.</p>
+            </div>
+
+            <div class="before-after-carousel" id="beforeAfterCarousel">
+              <button class="comparison-arrow comparison-arrow-prev" type="button" aria-label="Caso anterior" data-i18n-aria="results_previous" id="comparisonPrev">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6" /></svg>
+              </button>
+              <div class="comparison-content">
+                <div class="comparison-frame" id="comparisonFrame" style="--comparison-position: 50%">
+                  <div class="comparison-placeholder comparison-placeholder-after"><span data-i18n="results_photo_placeholder">Imagen pendiente</span></div>
+                  <div class="comparison-placeholder comparison-placeholder-before"><span data-i18n="results_photo_placeholder">Imagen pendiente</span></div>
+                  <span class="comparison-label comparison-label-before" data-i18n="results_before">Antes</span>
+                  <span class="comparison-label comparison-label-after" data-i18n="results_after">Después</span>
+                  <div class="comparison-divider" aria-hidden="true"><span></span></div>
+                  <input class="comparison-range" type="range" min="0" max="100" value="50" aria-label="Deslizar para comparar antes y después" data-i18n-aria="results_slider_aria" id="comparisonRange" />
+                </div>
+                <div class="comparison-caption">
+                  <span id="comparisonCase" data-i18n="results_case_1">Caso 01</span>
+                  <span id="comparisonCount">01 / 03</span>
+                </div>
+              </div>
+              <button class="comparison-arrow comparison-arrow-next" type="button" aria-label="Caso siguiente" data-i18n-aria="results_next" id="comparisonNext">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6" /></svg>
+              </button>
             </div>
 
             <div class="outcome_prlx-composition-comp">
@@ -564,12 +597,12 @@
                   Análisis visual y dermatoscópico detallado para identificar las prioridades y necesidades de su piel.
                 </p>
                 <!-- REEMPLAZAR con foto real -->
-                <img id="card1Img" src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=600&q=80" alt="Evaluación dermatológica en consulta" class="w2a-card-img" />
+                <img id="card1Img" src=":imagenes/evaluacionydiagnostico.png" alt="Evaluación y diagnóstico clínico" class="w2a-card-img" />
               </div>
 
               <!-- Step 2 Card -->
-              <div class="w2a-card" style="border-color: var(--color-sage-400);">
-                <div class="w2a-step-num" style="color: var(--color-sage-700);" data-i18n="w2a_step2_badge">Paso 02 • Procedimiento en Cabina</div>
+              <div class="w2a-card">
+                <div class="w2a-step-num" data-i18n="w2a_step2_badge">Paso 02 • Procedimiento en Cabina</div>
                 <h3 id="card2Title">Procedimiento Médico en Cabina</h3>
                 <p id="card2Desc">
                   Tratamiento con aparatología o técnica dermatológica seleccionada con criterio médico.
@@ -869,7 +902,7 @@
 
         <div class="all-rights-text">
           <p style="margin-bottom: 0.5rem;" data-i18n="footer_disclaimer">La información de este sitio es educativa y no reemplaza una consulta médica.</p>
-          <p data-i18n="footer_copyright">© 2026 Centro Clínico de la Dra. Belisa Medina. Todos los derechos reservados.</p>
+          <p data-i18n="footer_copyright">© 2026 Centro Dermatológico de la Dra. Belisa Medina. Todos los derechos reservados.</p>
         </div>
       </footer>
 
